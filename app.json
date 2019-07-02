@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Agreed-Build4",
+    "slug": "Agreed",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/out.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.agreed.agreed",
+      "buildNumber": "4"
+    },
+    "description": "",
+    "android": {
+      "package": "com.agreed.agreed"
+    }
+  }
+}
