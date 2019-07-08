@@ -19,35 +19,36 @@ export default class LoginView extends Component {
     render() {
         return (
             <ScrollView>
-                <View style = {[styles.container,{paddingTop: 50}]} >
-                    <Text style = {{color: 'white', alignSelf: 'center', fontSize: 18}}>UNDISPUTED FLAG FOOTBALL LEAGUE</Text>
+                    <View style={styles.backgroundContainer}/>
+                <View style = {[styles.container,{paddingTop: 50, paddingBottom: 20}]} >
+                    <Text style = {{color: '#555', alignSelf: 'center', fontSize: 25}}>LOGIN</Text>
                     <InputField
-                        style = {{marginTop: 60}}
+                        style = {{marginTop: 50}}
                         placeHolder= 'Email'
                     />
                     <InputField
                         placeHolder= 'Password'
                     />
                     <TouchableOpacity activeOpacity={0.7} style={styles.forgotPass} onPress = {this.navigateToForgot} >
-                        <Text style={{fontSize: 13, color: '#fff'}}>Forgot Password?</Text>
+                        <Text style={{fontSize: 13, color: '#555'}}>Forgot Password?</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity activeOpacity={0.7} style={styles.signInButton} onPress = {this.onPress} >
                         <Text style={styles.signInText}>Sign in</Text>
                     </TouchableOpacity>
-
-                    <TouchableOpacity activeOpacity={0.7} style={styles.signUpText} onPress = {() => navigateToSignUp()}>
-                        <Text style={{color: '#fff'}}>Dont have an account? Sign up</Text>
-                    </TouchableOpacity>
                     
                     <View style={[styles.signUpText, {padding: 10}]} >
-                        <Text style={{color: '#fff'}}>Or</Text>
+                        <Text style={{color: '#555'}}>Or</Text>
                     </View>
 
                     <TouchableOpacity activeOpacity={0.7} style={styles.googleSignIn} >
-                        <Ionicons name="logo-google" size={32} color="white" style = {{marginLeft: 10}} />
+                        <Ionicons name="logo-google" size={20} color="white" style = {{marginLeft: 10}} />
                         <View style = {styles.line} />
                         <Text style={styles.googleSignInText}>Login with Google</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity activeOpacity={0.7} style={styles.signUpText} onPress = {() => navigateToSignUp()}>
+                        <Text style={{color: '#555'}}>Dont have an account? Sign up</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

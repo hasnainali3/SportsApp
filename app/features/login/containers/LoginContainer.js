@@ -15,26 +15,27 @@ import {
     Right,
     Tabs,
     Tab
-  } from "native-base";
+} from "native-base";
 
 const { height, width } = Dimensions.get("window");
 
 class LoginContainer extends Component {
     render() {
-        return <ImageBackground style={{flex: 1}} source={require('../../../../assets/images/splash.jpg')}>
-              <Header transparent iosBarStyle="light-content" hasTabs>
-                <Left style={{ flex: 1 }}>
-                    <Text style={{textAlign:'left', fontWeight:'800', fontSize:30, marginLeft:20, color: "#fff"}} >Sign in</Text>
-                </Left>
-                <Body style={{ flex: 1, justifyContent: "center" }}>
-                  
-                </Body>
-                <Right style={{ flex: 1 }}>
-                  
-                </Right>
-              </Header>
-            <LoginView {...this.props} />
-        </ImageBackground>
+        return (
+            <Container style={{ flex: 1, backgroundColor: '#fff' }} >
+                <Header transparent iosBarStyle="light-content" style={{backgroundColor:'rgb(219,168,65)'}}>
+                    <Left style={{ flex: 1 }}>
+                        {/* <Text style={{ textAlign: 'left', fontWeight: '800', fontSize: 30, marginLeft: 20, color: "#333" }} >Sign in</Text> */}
+                    </Left>
+                    <Body style={{ flex: 1, justifyContent: "center" }}>
+
+                    </Body>
+                    <Right style={{ flex: 1 }}>
+
+                    </Right>
+                </Header>
+                <LoginView {...this.props} />
+            </Container>)
     }
 }
 

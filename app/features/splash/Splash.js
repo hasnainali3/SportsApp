@@ -16,8 +16,8 @@ export default class Splash extends Component {
 
     render() {
         return (
-                <ImageBackground source={require('../../../assets/images/splash.jpg')} resizeMode = {"cover"} style = {{flex: 1, justifyContent: 'center'}} >
-                    <Image style = {{width: 200, height: 200, alignSelf: 'center'}} resizeMode = {'contain'} source = {require('../../../assets/images/logo_real.png')} ></Image>
+                <ImageBackground source={require('../../assests/splashBack.jpg')} resizeMode = {"cover"} style = {{flex: 1, justifyContent: 'center'}} >
+                    <Image style = {{width: 200, height: 200, alignSelf: 'center', tintColor: '#fff'}} resizeMode = {'contain'} source = {require('../../../assets/images/logo_real.png')} ></Image>
                 </ImageBackground>
         );
     }

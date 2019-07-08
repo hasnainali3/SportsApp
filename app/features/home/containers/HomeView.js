@@ -76,28 +76,28 @@ export default class HomeView extends Component {
         {/* <Content showsVerticalScrollIndicator={false}>
           {this.renderImage()}
         </Content> */}
-          <Header transparent iosBarStyle="light-content" hasTabs style={{backgroundColor:'#000'}} androidStatusBarColor="#000">
+          <Header transparent iosBarStyle="light-content" hasTabs style={{backgroundColor:'rgb(219,170,67)'}} androidStatusBarColor="rgb(219,170,67)">
             <Body style={{ flex: 1, justifyContent: "center" }}>
-              <Title style={{ color: "#e2c56c", fontSize: 12, width: '100%' }}>UNDISPUTED FLAG FOOTBALL </Title>
+              <Title style={{ color: "#000", fontSize: 12, width: '100%' }}>UNDISPUTED FLAG FOOTBALL </Title>
             </Body>
             <Right style={{ flex: 1 }}>
-              <Ionicons name="md-search" size={20} color={"white"} />
+              <Ionicons name="md-search" size={20} color={"#000"} />
             </Right>
           </Header>
-          <Tabs locked tabBarUnderlineStyle = {{backgroundColor: '#e2c56c'}} renderTabBar={() => <ScrollableTab />}>
-            <Tab tabStyle={{backgroundColor: 'black'}} activeTabStyle={{backgroundColor: 'black'}} textStyle={{color: '#e2c56c'}} activeTextStyle={{color: '#e2c56c'}}  heading="TEAM">
+          <Tabs locked tabBarUnderlineStyle = {{backgroundColor: 'rgb(219,170,67)'}} renderTabBar={() => <ScrollableTab />}>
+            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}}  heading="TEAM">
               <Draft />
             </Tab>
-            <Tab tabStyle={{backgroundColor: 'black'}} activeTabStyle={{backgroundColor: 'black'}} textStyle={{color: '#e2c56c'}} activeTextStyle={{color: '#e2c56c'}} heading="SCORES">
+            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}} heading="SCORES">
               <Scores/>
             </Tab>
-            <Tab tabStyle={{backgroundColor: 'black'}} activeTabStyle={{backgroundColor: 'black'}} textStyle={{color: '#e2c56c'}} activeTextStyle={{color: '#e2c56c'}} heading="NEWS">
+            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}} heading="NEWS">
               <News/>
             </Tab>
-            <Tab tabStyle={{backgroundColor: 'black'}} activeTabStyle={{backgroundColor: 'black'}} textStyle={{color: '#e2c56c', fontSize: 9}} activeTextStyle={{color: '#e2c56c'}} heading="STANDINGS">
+            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd', fontSize: 9}} activeTextStyle={{color: '#000'}} heading="STANDINGS">
               <Standings />
             </Tab>
-            <Tab tabStyle={{backgroundColor: 'black'}} activeTabStyle={{backgroundColor: 'black'}} textStyle={{color: '#e2c56c'}} activeTextStyle={{color: '#e2c56c'}} heading="STATS">
+            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}} heading="STATS">
               <Stats/>
             </Tab>
           </Tabs>
@@ -117,7 +117,7 @@ export default class HomeView extends Component {
         />
         <Image
           source={require("../../../assests/home/Frame_1.png")}
-          style={[imageBackground, { tintColor: "black" }]}
+          style={[imageBackground, { tintColor: "rgb(219,170,67)" }]}
           resizeMode={"cover"}
           blurRadius={5}
         />

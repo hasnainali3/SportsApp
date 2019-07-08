@@ -3,7 +3,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        elevation: 3,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        margin: 20,
+        marginTop: 0
     },
     forgotPass: {
         width: '100%', 
@@ -13,8 +18,8 @@ const styles = StyleSheet.create({
     signInButton : {
         width: '80%', 
         borderRadius: 50, 
-        backgroundColor:'#000', 
-        padding:12, 
+        backgroundColor:'rgb(219,168,65)', 
+        padding:10, 
         alignItems:'center',
         elevation:2,
         shadowColor: 'rgba(0,0,0,0.5)',
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
         width: '80%', 
         borderRadius: 50, 
         backgroundColor:'#ff2d55', 
-        padding:10, 
+        padding:7, 
         alignItems:'center',
         elevation:2,
         shadowColor: 'rgba(0,0,0,0.5)',
@@ -58,6 +63,17 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         opacity: 0.4
     },
+    backgroundContainer: {
+        position: 'absolute',
+        width: '100%',
+        height: '30%',
+        top: 0,
+        left: 0,
+        right: 0,
+        backgroundColor:'rgb(219,168,65)', 
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20
+    }
 });
 
 export default styles;
