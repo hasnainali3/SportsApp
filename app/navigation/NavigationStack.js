@@ -72,11 +72,12 @@ const RNApp = createStackNavigator(
              }
         },
         Home: {
-            screen: createDrawerNavigator({
-                TabNavigation,
-            }, {
-                contentComponent: Drawer
-            }),
+            screen: TabNavigation,
+            // createDrawerNavigator({
+            //     TabNavigation,
+            // }, {
+            //     contentComponent: Drawer
+            // }),
             navigationOptions : {
                 header: null
             }
@@ -134,7 +135,7 @@ const RNApp = createStackNavigator(
         // Drawer: Drawer
     },
     {
-        initialRouteName: 'Splash'
+        initialRouteName: 'Home'
     }
 );
 

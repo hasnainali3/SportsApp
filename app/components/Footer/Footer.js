@@ -21,7 +21,7 @@ export default class FooterTabNav extends React.Component{
                         Home
                     </Text>
                 </Button>
-                <Button style={{flex:1}} onPress={()=>navigate('Home')}>
+                <Button style={{flex:1}} onPress={()=>navigate('New')}>
                     <Ionicons name="md-play" size={30} color = {'#000'} />
                     <Text style = {{color: '#000', fontSize: 12}} >{"Highlight video"}</Text>
                 </Button>
