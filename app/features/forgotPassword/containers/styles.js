@@ -9,7 +9,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
     margin: 20,
-    marginTop: 0
+    marginTop: 0,
+    shadowColor: "rgba(0,0,0,0.5)",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.7,
+    shadowRadius: 5
   },
   headerText: {
     fontWeight: "bold",
