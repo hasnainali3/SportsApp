@@ -59,15 +59,13 @@ const style = {
     backgroundColor: "#fff",
     borderColor: "#ddd",
     borderWidth: 1,
-    margin: 5,
-    boderRadius: 5
+    margin: 5
   },
   activeTabStyle: {
     backgroundColor: "rgb(219,170,67)",
     borderColor: "#ddd",
     borderWidth: 1,
-    margin: 5,
-    boderRadius: 5
+    margin: 5
   },
   textStyle: {
     color: "#000"
