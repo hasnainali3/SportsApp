@@ -1,1 +1,9 @@
-{}
+{
+  "expoServerPort": 19000,
+  "expoServerNgrokUrl": "https://kr-e6e.jeremytj.sportsapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.kr-e6e.jeremytj.sportsapp.exp.direct",
+  "ngrokPid": 11363,
+  "devToolsPort": 19002,
+  "packagerPort": 19003,
+  "packagerPid": 11335
+}

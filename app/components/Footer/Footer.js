@@ -9,26 +9,6 @@ export default class FooterTabNav extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <Footer>
-<<<<<<< HEAD
-        <FooterTab style={{ backgroundColor: "rgb(219,170,67)" }}>
-          <Button style={{ flex: 1 }} onPress={() => navigate("Home")}>
-            <Ionicons name="md-home" size={30} color={"#000"} />
-            <Text style={{ color: "#000", fontSize: 12 }}>Home</Text>
-          </Button>
-          <Button style={{ flex: 1 }} onPress={() => navigate("New")}>
-            <Ionicons name="md-play" size={30} color={"#000"} />
-            <Text style={{ color: "#000", fontSize: 12 }}>
-              {"Highlight video"}
-            </Text>
-          </Button>
-          <Button style={{ flex: 1 }} onPress={() => navigate("HighlightPics")}>
-            <Ionicons name="md-camera" size={30} color={"#000"} />
-            <Text style={{ color: "#000", fontSize: 12 }}>Highlight pics</Text>
-          </Button>
-          <Button style={{ flex: 1 }} onPress={() => navigate("Home")}>
-            <Ionicons name="md-calendar" size={30} color={"#000"} />
-            <Text style={{ color: "#000", fontSize: 12 }}>Weeks</Text>
-=======
         <FooterTab
           style={{
             backgroundColor: "#fff",
@@ -46,14 +26,13 @@ export default class FooterTabNav extends React.Component {
               {"Highlight video"}
             </Text>
           </Button>
-          <Button style={{ flex: 1 }} onPress={() => navigate("Home")}>
+          <Button style={{ flex: 1 }} onPress={() => navigate("HighlightPics")}>
             <Ionicons name="md-camera" size={25} color={"#000"} />
             <Text style={{ color: "#000", fontSize: 10 }}>Highlight pics</Text>
           </Button>
-          <Button style={{ flex: 1 }} onPress={() => navigate("Home")}>
+          <Button style={{ flex: 1 }} onPress={() => navigate("Weeks")}>
             <Ionicons name="md-calendar" size={25} color={"#000"} />
             <Text style={{ color: "#000", fontSize: 10 }}>Weeks</Text>
->>>>>>> 697594a59e5ce56b5e02941a1935e4fc17ae8e59
           </Button>
         </FooterTab>
       </Footer>
