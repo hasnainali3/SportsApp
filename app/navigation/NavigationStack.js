@@ -145,7 +145,7 @@ const RNApp = createStackNavigator(
     // Drawer: Drawer
   },
   {
-    initialRouteName: "Splash"
+    initialRouteName: "Login"
   }
 );
 
