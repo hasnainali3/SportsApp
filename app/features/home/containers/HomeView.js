@@ -28,10 +28,10 @@ import { headerStyle } from "../../../style";
 import Card from "../components/card";
 const { height, width } = Dimensions.get("window");
 import NavBarButton from "../../../components/Button/NavBarButton";
-import Draft from './tabs/Draft';
-import Scores from './tabs/Scores';
-import News from './tabs/News';
-import Stats from './tabs/Stats';
+import Draft from "./tabs/Draft";
+import Scores from "./tabs/Scores";
+import News from "./tabs/News";
+import Stats from "./tabs/Stats";
 import Standings from "./tabs/Standings";
 
 const data = [
@@ -54,12 +54,30 @@ const data = [
     type: "Entertainment"
   }
 ];
-
+const style = {
+  tabStyle: {
+    backgroundColor: "#fff",
+    borderColor: "#ddd",
+    borderWidth: 1,
+    margin: 5
+  },
+  activeTabStyle: {
+    backgroundColor: "rgb(219,170,67)",
+    borderColor: "#ddd",
+    borderWidth: 1,
+    margin: 5
+  },
+  textStyle: {
+    color: "#000"
+  },
+  activeTextStyle: {
+    color: "#fff"
+  }
+};
 export default class HomeView extends Component {
-  static navigationOptions = ({navigation}) => ({
+  static navigationOptions = ({ navigation }) => ({
     header: null
-  })
-
+  });
 
   constructor(props) {
     super(props);
@@ -72,35 +90,51 @@ export default class HomeView extends Component {
   render() {
     let { container } = styles;
     return (
-      <Container style={{backgroundColor: '#000'}}>
+      <Container style={{ backgroundColor: "#000" }}>
         {/* <Content showsVerticalScrollIndicator={false}>
           {this.renderImage()}
         </Content> */}
-          <Header transparent iosBarStyle="light-content" hasTabs style={{backgroundColor:'rgb(219,170,67)'}} androidStatusBarColor="rgb(219,170,67)">
-            <Body style={{ flex: 1, justifyContent: "center" }}>
-              <Title style={{ color: "#000", fontSize: 12, width: '100%' }}>UNDISPUTED FLAG FOOTBALL </Title>
-            </Body>
-            <Right style={{ flex: 1 }}>
-              <Ionicons name="md-search" size={20} color={"#000"} />
-            </Right>
-          </Header>
-          <Tabs locked tabBarUnderlineStyle = {{backgroundColor: 'rgb(219,170,67)'}} renderTabBar={() => <ScrollableTab />}>
-            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}}  heading="TEAM">
-              <Draft />
-            </Tab>
-            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}} heading="SCORES">
-              <Scores/>
-            </Tab>
-            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}} heading="NEWS">
-              <News/>
-            </Tab>
-            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd', fontSize: 9}} activeTextStyle={{color: '#000'}} heading="STANDINGS">
-              <Standings />
-            </Tab>
-            <Tab tabStyle={{backgroundColor: 'rgb(219,170,67)'}} activeTabStyle={{backgroundColor: 'rgb(219,170,67)'}} textStyle={{color: '#ddd'}} activeTextStyle={{color: '#000'}} heading="STATS">
-              <Stats/>
-            </Tab>
-          </Tabs>
+        <Header
+          transparent
+          iosBarStyle="light-content"
+          hasTabs
+          style={{ backgroundColor: "rgb(219,170,67)" }}
+          androidStatusBarColor="rgb(219,170,67)"
+        >
+          <Body style={{ flex: 1, justifyContent: "center" }}>
+            <Title style={{ color: "#fff", fontSize: 12, width: "100%" }}>
+              UNDISPUTED FLAG FOOTBALL{" "}
+            </Title>
+          </Body>
+          <Right style={{ flex: 1 }}>
+            <Ionicons name="md-search" size={20} color={"#fff"} />
+          </Right>
+        </Header>
+        <Tabs
+          locked
+          tabBarUnderlineStyle={{ backgroundColor: "transparent" }}
+          renderTabBar={() => (
+            <ScrollableTab
+              style={{ backgroundColor: "#fff", borderBottomWidth: 0 }}
+            />
+          )}
+        >
+          <Tab {...style} heading="TEAM">
+            <Draft />
+          </Tab>
+          <Tab {...style} heading="SCORES">
+            <Scores />
+          </Tab>
+          <Tab {...style} heading="NEWS">
+            <News />
+          </Tab>
+          <Tab {...style} heading="STANDINGS">
+            <Standings />
+          </Tab>
+          <Tab {...style} heading="STATS">
+            <Stats />
+          </Tab>
+        </Tabs>
       </Container>
     );
   }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import tiger from '../../../../../assets/images/tiger.png';
 import player from '../../../../../assets/images/player.png';
+import { Icon } from "native-base";
 
 export default class Draft extends Component {
   constructor(props) {
@@ -12,26 +13,6 @@ export default class Draft extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{ backgroundColor: "white", height: 200 }}>
-          <View style={{flex: 1, marginLeft: 15 }}>
-            <Text style={{ color: "black", fontWeight: "bold", marginTop: 12 }}>
-              My Team Picks
-            </Text>
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={[1, 2, 3, 4, 5, 6]}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={this.renderFirstView}
-            />
-
-          </View>
-        </View>
-        <View style={{ height: 1, backgroundColor: "#e2c56c" }} />
-        <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: 15 }}>
-          <Text style={{ color: "black" }}>All Teams</Text>
-          <Text style={{ color: "black" }}>Round 1</Text>
-        </View>
         <View style={{flex: 1}}>
         <FlatList
           data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
@@ -44,8 +25,17 @@ export default class Draft extends Component {
   }
 
   renderSecondView = (index) => (
-    <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }} >
-      <Text style={{ color: 'black', marginLeft: 12 }} >{index}</Text>
+    <View style={{ 
+      flexDirection: 'row', 
+      alignItems: 'center', 
+      margin: 10, 
+      marginBottom: 0, 
+      backgroundColor: '#ffffff', 
+      borderColor: '#ddd', 
+      borderWidth: 1 ,
+      padding: 5,
+      borderRadius: 6
+      }} >
       <View style={{ flexDirection: 'row' }} >
         <Image
           style={{ width: 40, height: 40, borderRadius: 20, marginLeft: 10 }}
@@ -59,11 +49,7 @@ export default class Draft extends Component {
 
       </View>
       <View style={{ position: 'absolute', right: 20, }} >
-        <Image
-          style={{ width: 40, height: 40, borderRadius: 20, marginLeft: 10 }}
-          resizeMode={"contain"}
-          source={tiger}
-        />
+        <Icon name='ios-arrow-forward'/>
       </View>
     </View>
 

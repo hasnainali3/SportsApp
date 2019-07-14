@@ -2,7 +2,54 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import tiger from "../../../../../assets/images/tiger.png";
-
+import { Thumbnail } from "native-base";
+const data = [
+  {
+    heading: { date: "Sunday, july 21, 2019", time: "9: 45 AM" },
+    image:
+      "https://image.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg",
+    name: "Jonah Lomu",
+    point: "277"
+  },
+  {
+    heading: { date: "Sunday, july 21, 2019", time: "9: 45 AM" },
+    image:
+      "https://image.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg",
+    name: "Jonah Lomu",
+    point: "277"
+  },
+  {
+    heading: {
+      date: "Sunday, july 21, 2019",
+      time: "9: 45 AM"
+    },
+    image:
+      "https://image.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg",
+    name: "Jonah Lomu",
+    point: "277"
+  },
+  {
+    heading: { date: "Sunday, july 21, 2019", time: "9: 45 AM" },
+    image:
+      "https://image.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg",
+    name: "Jonah Lomu",
+    point: "277"
+  },
+  {
+    heading: { date: "Sunday, july 21, 2019", time: "9: 45 AM" },
+    image:
+      "https://image.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg",
+    name: "Jonah Lomu",
+    point: "277"
+  },
+  {
+    heading: { date: "Sunday, july 21, 2019", time: "9: 45 AM" },
+    image:
+      "https://image.shutterstock.com/image-photo/close-portrait-smiling-handsome-man-260nw-1011569245.jpg",
+    name: "Jonah Lomu",
+    point: "277"
+  }
+];
 export default class Scores extends Component {
   constructor(props) {
     super(props);
@@ -12,148 +59,73 @@ export default class Scores extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <View
-          style={{
-            height: 40,
-            flexDirection: "row",
-            justifyContent: "space-around"
-          }}
-        > */}
-          {/* <Text style={{ fontWeight: "bold", color: "black" }}>{"<"}</Text> */}
-          {/* <View style={{ flexDirection: "row" }}>
-            <Ionicons name="md-calendar" />
-            <Text style={{ fontWeight: "bold", color: "black", marginLeft: 5 }}>
-              {"Week 1"}
-            </Text>
-          </View> */}
-          {/* <Text style={{ fontWeight: "bold", color: "black" }}>{"<"}</Text> */}
-         {/* </View> */}
-
-        <Text style={{ fontWeight: "bold", color: "black", margin: 14 }}>
-          My Teams
-        </Text>
-        <View style={{ flexDirection: "row" }}>
-          <Image
-            style={{ width: 40, height: 40, borderRadius: 20, marginLeft: 10 }}
-            resizeMode={"contain"}
-            source={tiger}
-          />
-          <Text style={{ fontWeight: "bold", color: "black", marginLeft: 5 }}>
-            Colts
-          </Text>
-          <Text
-            style={{
-              color: "grey",
-              marginLeft: 10,
-              fontSize: 10,
-              marginTop: 3
-            }}
-          >
-            0 - 0
-          </Text>
-          <View
-            style={{ position: "absolute", right: 30, flexDirection: "row" }}
-          >
-            <Text
-              style={{
-                color: "grey",
-                marginLeft: 10,
-                fontSize: 10,
-                marginTop: 3
-              }}
-            >
-              LAC - 3
-            </Text>
-            <Text
-              style={{
-                color: "grey",
-                marginLeft: 10,
-                fontSize: 10,
-                marginTop: 3
-              }}
-            >
-              9/9, 1:05 AM
-            </Text>
-          </View>
-        </View>
-        <View style={{ flexDirection: "row" }}>
-          <Image
-            style={{ width: 40, height: 40, borderRadius: 20, marginLeft: 10 }}
-            resizeMode={"contain"}
-            source={tiger}
-          />
-          <Text style={{ fontWeight: "bold", color: "black", marginLeft: 5 }}>
-            Chargers
-          </Text>
-          <Text
-            style={{
-              color: "grey",
-              marginLeft: 10,
-              fontSize: 10,
-              marginTop: 3
-            }}
-          >
-            0 - 0
-          </Text>
-        </View>
-
-        <View style={{ height: 1, backgroundColor: "#e2c56c", marginTop: 10 }} />
-        <Text style={{ fontWeight: "bold", margin: 22 }}>Scheduled</Text>
-        <FlatList 
-            data={["Packers", "Bears", "Titans"]}
-            renderItem = {(item) => this.renderedBotView(item)}
-            keyExtractor = {(item, index) => index.toString()}
+        <FlatList
+          data={data}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item }) => (
+            <View key="card" style={styles.card}>
+              <View key="heading" style={styles.heading}>
+                <Text style={styles.text}>{item.heading.date}</Text>
+                <Text style={styles.text}>{item.heading.time}</Text>
+              </View>
+              <View key="body" style={styles.body}>
+                <View key="team1" style={{ alignItems: "center" }}>
+                  <Thumbnail source={{ uri: item.image }} />
+                  <Text style={[styles.text, { color: "#333" }]}>
+                    {item.name}
+                  </Text>
+                </View>
+                <View key="team2" style={{ alignItems: "center" }}>
+                  <Thumbnail source={{ uri: item.image }} />
+                  <Text style={[styles.text, { color: "#333" }]}>
+                    {item.name}
+                  </Text>
+                </View>
+              </View>
+              <View key="footer" style={styles.footer}>
+                <Text style={styles.text}>Show Full Table</Text>
+              </View>
+            </View>
+          )}
         />
-
       </View>
     );
   }
-
-  renderedBotView = (item) => (
-    <View>
-      <View style={{ flexDirection: "row" }}>
-        <Image
-          style={{ width: 40, height: 40, borderRadius: 20, marginLeft: 10 }}
-          resizeMode={"contain"}
-          source={tiger}
-        />
-        <Text style={{ fontWeight: "bold", color: "black", marginLeft: 5 }}>
-          {item.item}
-        </Text>
-        <Text
-          style={{ color: "grey", marginLeft: 10, fontSize: 10, marginTop: 3 }}
-        >
-          0 - 0
-        </Text>
-        <View style={{ position: "absolute", right: 30, flexDirection: "row" }}>
-          <Text
-            style={{
-              color: "grey",
-              marginLeft: 10,
-              fontSize: 10,
-              marginTop: 3
-            }}
-          >
-            LAC - 3
-          </Text>
-          <Text
-            style={{
-              color: "grey",
-              marginLeft: 10,
-              fontSize: 10,
-              marginTop: 3
-            }}
-          >
-            9/9, 1:05 AM
-          </Text>
-        </View>
-      </View>
-    </View>
-  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    padding: 5
+  },
+  card: {
+    flex: 1,
+    backgroundColor: "#fff",
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "#ddd",
+    overflow: "hidden",
+    margin: 5,
+    elevation: 2
+  },
+  heading: {
+    // backgroundColor: "rgb(219,170,67)",
+    paddingVertical: 5
+  },
+  body: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 10
+  },
+  footer: {
+    // backgroundColor: "rgb(219,170,67)",
+    paddingVertical: 5
+  },
+  text: {
+    color: "#333",
+    textAlign: "center"
   }
 });
