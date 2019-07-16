@@ -172,7 +172,8 @@ export default class Standings extends Component {
                     justifyContent: "space-between"
                   }}
                 >
-                  <Text style={styles.text}>W/L</Text>
+                  <Text style={styles.text}>W</Text>
+                  <Text style={styles.text}>L</Text>
                   <Text style={styles.text}>PF</Text>
                   <Text style={styles.text}>PA</Text>
                 </View>

@@ -76,6 +76,7 @@ export default class Scores extends Component {
                     {item.name}
                   </Text>
                 </View>
+                <Text>VS</Text>
                 <View key="team2" style={{ alignItems: "center" }}>
                   <Thumbnail source={{ uri: item.image }} />
                   <Text style={[styles.text, { color: "#333" }]}>
