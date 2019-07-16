@@ -57,17 +57,27 @@ const data = [
 const style = {
   tabStyle: {
     backgroundColor: "#fff",
-    borderColor: "#ddd",
+    borderColor: "#fff",
     borderWidth: 1,
     margin: 5,
-    borderRadius: 6
+    borderRadius: 6,
+    elevation: 5,
+    shadowColor: "rgba(0,0,0,0.5)",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.7,
+    shadowRadius: 5
   },
   activeTabStyle: {
     backgroundColor: "rgb(219,170,67)",
-    borderColor: "#ddd",
+    borderColor: "transparent",
     borderWidth: 1,
     margin: 5,
-    borderRadius: 6
+    borderRadius: 6,
+    elevation: 5,
+    shadowColor: "rgba(0,0,0,0.5)",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.7,
+    shadowRadius: 5
   },
   textStyle: {
     color: "#000"

@@ -201,7 +201,12 @@ export default class Standings extends Component {
                         paddingHorizontal: 10
                       }}
                     >
-                      <Text style={styles.dataText}>{element.w}</Text>
+                      <Text style={[styles.dataText, { paddingLeft: 0 }]}>
+                        {element.w}
+                      </Text>
+                      <Text style={[styles.dataText, { paddingLeft: 0 }]}>
+                        {element.L}
+                      </Text>
                       <Text style={[styles.dataText, { paddingLeft: 0 }]}>
                         {element.L}
                       </Text>
